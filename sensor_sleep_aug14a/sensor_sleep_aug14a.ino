@@ -86,7 +86,7 @@ void loop() {
     duration = pulseIn(echo, HIGH, 50000);// use the function pulsein to detect the time of the echo when it is in a high state
     distance = (duration * 0.0343 / 2) * 0.393701; // get the distance in inches
 
-    if (distance > 0.0 && distance < 12.0) { // if object is within a foot
+    if (distance > 0.0 && distance < 60.0) { // if object is within 5 feet
       digitalWrite(LED_PIN, HIGH);  // turn light on
       printLocalTime();
       ledStartTime = millis(); // set ledStartTime to current run time
